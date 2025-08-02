@@ -1,0 +1,48 @@
+/* Popup үндсэн container */
+.modal {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Доторх цагаан хэсэг */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  max-height: 70vh;
+  overflow-y: auto;
+  animation: slideUp 0.4s ease;
+}
+
+/* Close товч */
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Анимац */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0,0,0,0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
